@@ -5,3 +5,4 @@ description: ""
 baseurl: ""
 url: ""
 markdown: kramdown
+highlighter: pygments

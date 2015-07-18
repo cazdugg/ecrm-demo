@@ -7,3 +7,25 @@ layout: default
     <h1>Headers</h1>
   </div>
 </div>
+
+{% for header in site.data.headers %}
+  <div class="panel panel-default">
+    <div class="panel-heading"><p class="lead text-info">{{ header.name }}</p></div>
+
+    <div class="panel-body">
+      <p class="text-muted"><small>{{ header.desc }}</small></p>
+
+      <div class="col-lg-6">
+        <p class="text-info">Code</p>
+        {% highlight html linenos %}
+          {{ header.code }}
+        {% endhighlight %}
+      </div>
+
+      <div class="col-lg-6">
+        <p class="text-info">Preview</p>
+        {{ header.code }}
+      </div>
+    </div>
+  </div>
+{% endfor %}
