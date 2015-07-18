@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="lead text-info">{{ snippet.name }}</p></div>
+
+  <div class="panel-body">
+    <p class="text-muted"><small>{{ snippet.desc }}</small></p>
+
+    <div class="col-lg-6">
+      <p class="text-info">Code</p>
+      {% highlight html linenos %}
+        {{ snippet.code }}
+      {% endhighlight %}
+    </div>
+
+    <div class="col-lg-6">
+      <p class="text-info">Preview</p>
+      {{ snippet.code }}
+    </div>
+  </div>
+</div>
